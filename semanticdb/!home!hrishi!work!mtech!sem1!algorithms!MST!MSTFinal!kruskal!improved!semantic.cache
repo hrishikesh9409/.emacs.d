@@ -1,0 +1,109 @@
+;; Object improved/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "improved/"
+  :tables (list 
+   (semanticdb-table "improved.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("bits/stdc++.h" include (:system-flag t) nil [1 25])
+            ("ctime" include (:system-flag t) nil [26 42])
+            ("stdlib.h" include (:system-flag t) nil [43 62])
+            ("time.h" include (:system-flag t) nil [63 80])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [82 102])
+            ("PAIR" type
+               (:typedef ("pair" type
+                     (:template-specifier 
+                        ( ("int" type nil nil nil)
+                          ("int" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "pair"
+                :type "typedef")
+                nil [105 134])
+            ("Graph" type
+               (:members 
+                  ( ("E" variable (:type "int") (reparse-symbol classsubparts) [154 163])
+                    ("V" variable (:type "int") (reparse-symbol classsubparts) [154 163])
+                    ("edges" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("pair" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [168 200])
+                    ("Graph" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("V" variable (:type "int") (reparse-symbol arg-sub-list) [211 217])
+                            ("E" variable (:type "int") (reparse-symbol arg-sub-list) [218 224]))                          
+                        :type ("Graph" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [205 278])
+                    ("addEdge" function
+                       (:arguments 
+                          ( ("u" variable (:type "int") (reparse-symbol arg-sub-list) [296 302])
+                            ("v" variable (:type "int") (reparse-symbol arg-sub-list) [303 309])
+                            ("w" variable (:type "int") (reparse-symbol arg-sub-list) [310 316]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [283 366])
+                    ("MST" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [371 381]))                  
+                :type "struct")
+                nil [135 384])
+            ("DisjointSets" type
+               (:members 
+                  ( ("rank" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [411 430])
+                    ("Parent" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [411 430])
+                    ("n" variable (:type "int") (reparse-symbol classsubparts) [435 441])
+                    ("DisjointSets" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [460 466]))                          
+                        :type ("DisjointSets" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [447 695])
+                    ("find" function
+                       (:arguments 
+                          ( ("u" variable (:type "int") (reparse-symbol arg-sub-list) [710 716]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [701 824])
+                    ("merge" function
+                       (:arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [840 846])
+                            ("y" variable (:type "int") (reparse-symbol arg-sub-list) [847 853]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [829 1055]))                  
+                :type "struct")
+                nil [385 1058])
+            ("MST" function
+               (:parent "Graph"
+                :type "int")
+                nil [1062 1539])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1551 1560])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1561 1574]))                  
+                :type "int")
+                nil [1542 2852]))          
+    :file "improved.cpp"
+    :pointmax 2852
+    :fsize 2851
+    :lastmodtime '(22592 19074 244101 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!hrishi!work!mtech!sem1!algorithms!MST!MSTFinal!kruskal!improved!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

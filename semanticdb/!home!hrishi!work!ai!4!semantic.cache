@@ -1,0 +1,26 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("game.h" include nil nil [1 18])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [20 40])
+            ("main" function (:type "int") nil [42 344]))          
+      :file "main.cpp"
+      :pointmax 344
+      :fsize 343
+      :lastmodtime '(23015 12354 882460 158000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "game.h"
+      :fsize 486
+      :lastmodtime '(23015 11868 346066 222000)))
+  :file "!home!hrishi!work!ai!4!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

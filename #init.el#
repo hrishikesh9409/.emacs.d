@@ -1,0 +1,132 @@
+;-----------------------------------------------------------------------------------;
+
+;start up as fullscreen editor:
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
+;-----------------------------------------------------------------------------------;
+
+;suppress initial welcome message buffer:
+(setq inhibit-startup-message t)
+(load "/home/hrishi/.emacs.d/themes/ir-black-theme.el")
+;enable line numbers:
+(global-linum-mode t)
+;disable line numbers:
+(menu-bar-mode -1)
+;disable toolbar:
+(tool-bar-mode -1)
+
+(defun fontify-frame (frame)
+  (set-frame-parameter frame 'font "Monospace-10.5"))
+
+;; Fontify current frame:
+(fontify-frame nil)
+;; Fontify any future frames:
+(push 'fontify-frame after-make-frame-functions) 
+;-----------------------------------------------------------------------------------;
+
+;set global undo key:
+(global-set-key [f4] 'undo)
+;enable clipboard support for emacs: 
+(global-set-key "\C-w" 'clipboard-kill-region)
+(global-set-key "\M-w" 'clipboard-kill-ring-save)
+(global-set-key "\C-y" 'clipboard-yank)
+
+;undo and redo global keys:
+(when (require 'redo nil 'noerror)
+    (global-set-key (kbd "C-s-z") 'redo))
+
+(global-set-key (kbd "C-z") 'undo)
+
+;-----------------------------------------------------------------------------------;
+
+;paste to and from clipboard (while using emacs from terminal):
+(defun copy-to-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (message "Yanked region to x-clipboard!")
+        (call-interactively 'clipboard-kill-ring-save)
+        )
+    (if (region-active-p)
+        (progn
+          (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
+          (message "Yanked region to clipboard!")
+          (deactivate-mark))
+      (message "No region active; can't yank to clipboard!")))
+  )
+
+(defun paste-from-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (clipboard-yank)
+        (message "graphics active")
+        )
+    (insert (shell-command-to-string "xsel -o -b"))
+    )
+  )
+
+(global-set-key [f5] 'copy-to-clipboard)
+(global-set-key [f6] 'paste-from-clipboard)
+;-----------------------------------------------------------------------------------;
+
+;to setup melpa package manager:
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/"))
+
+(package-initialize)
+;-----------------------------------------------------------------------------------;
+
+;setting up autocomplete for all programming languages:
+(require 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
+
+;setting up YASnippet and start it with emacs:
+(require 'yasnippet)
+(yas-global-mode 1)
+;-----------------------------------------------------------------------------------;
+;autocomplete for c and cpp headers:
+(defun my:ac-c-headers-init ()
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers)
+  (add-to-list achead:include-directories '"/usr/include/c++/4.8")
+  (add-to-list achead:include-directories '"/usr/include/x86_64-linux-gnu/c++/4.8")
+  (add-to-list achead:include-directories '"/usr/include/c++/4.8/backward")
+  (add-to-list achead:include-directories '"/usr/lib/gcc/x86_64-linux-gnu/4.8/include")
+  (add-to-list achead:include-directories '"/usr/local/include")
+  (add-to-list achead:include-directories '"/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed")
+  (add-to-list achead:include-directories '"/usr/include/x86_64-linux-gnu")
+  (add-to-list achead:include-directories '"/usr/include")
+)
+
+(add-hook 'c++-mode-hook 'my:ac-c-headers-init)
+(add-hook 'c-mode-hook 'my:ac-c-headers-init)
+;-----------------------------------------------------------------------------------;
+
+;global shortcut for iedit mode: 
+(define-key global-map (kbd "C-c ;") 'iedit-mode)
+;-----------------------------------------------------------------------------------;
+
+;start flymake-google-cpplint-load:
+(defun my:flymake-google-init 
+	(require 'flymake-google-cpplint)
+	(custom-set-variables
+		'(flymake-google-cpplint-command "/usr/local/bin/cpplint")
+	)
+	(flymake-google-cpplint-load)	
+)
+
+(add-hook 'c++-mode-hook 'my:flymake-google-init)
+(add-hook 'c-mode-hook 'my:flymake-google-init)
+;-----------------------------------------------------------------------------------;
+
+;start google-c-style with emacs:
+(require 'google-c-style)
+
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+;-----------------------------------------------------------------------------------;

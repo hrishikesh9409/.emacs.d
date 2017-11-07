@@ -8,15 +8,16 @@
       :tags 
         '( ("string" include (:system-flag t) nil [1 18])
             ("SDL2/SDL.h" include (:system-flag t) nil [19 40])
+            ("SDL2/SDL.h" include (:system-flag t) nil [41 62])
             ("std" using (:type ("std" type
                  (:prototype t
                   :type "namespace")
-                  nil nil)) nil [42 62])
-            ("main" function (:type "int") nil [64 333]))          
+                  nil nil)) nil [64 84])
+            ("main" function (:type "int") nil [86 317]))          
       :file "main.cpp"
-      :pointmax 334
-      :fsize 295
-      :lastmodtime '(23041 3000 867734 3000)
+      :pointmax 318
+      :fsize 317
+      :lastmodtime '(23041 36042 123834 184000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode

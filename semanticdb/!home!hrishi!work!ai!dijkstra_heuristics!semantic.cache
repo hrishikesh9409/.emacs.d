@@ -1,0 +1,42 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("game.h" include nil nil [1 18])
+            ("heuristics.h" include nil nil [19 42])
+            ("ctime" include (:system-flag t) nil [43 59])
+            ("cstdlib" include (:system-flag t) nil [60 78])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [80 100])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [111 120])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [121 134]))                  
+                :type "int")
+                nil [102 2989]))          
+      :file "main.cpp"
+      :pointmax 2989
+      :fsize 2988
+      :lastmodtime '(23023 14864 421403 225000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "game.h"
+      :fsize 392
+      :lastmodtime '(23023 14864 421403 225000))
+    (semanticdb-table "semanticdb-table"
+      :file "heuristics.h"
+      :fsize 305
+      :lastmodtime '(23023 14864 421403 225000)))
+  :file "!home!hrishi!work!ai!dijkstra_heuristics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
