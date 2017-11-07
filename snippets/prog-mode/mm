@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: mm
+# key: mm
+# --
+CC = 
+
+INCLUDE = 
+
+LIBS = 
+
+# enter file with the extension
+FILENAME = 
+BIN = 
+
+all: $(FILENAME)
+		@$(CC) -ggdb $(INCLUDE) $(FILENAME) -o $(BIN) $(LIBS)
+
+run:
+		@./$(BIN)	
+
+clean:
+		rm ./$(BIN)

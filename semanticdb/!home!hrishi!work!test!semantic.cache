@@ -1,0 +1,79 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("test.h" include nil nil [1 18])
+            ("SDL2/SDL.h" include (:system-flag t) nil [19 40])
+            ("string" include (:system-flag t) nil [41 58])
+            ("math.h" include (:system-flag t) nil [59 76])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [78 98])
+            ("main" function (:type "int") nil [100 250]))          
+      :file "main.cpp"
+      :pointmax 251
+      :fsize 250
+      :lastmodtime '(23041 3713 660216 472000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "test.h"
+      :fsize 198
+      :lastmodtime '(23032 23697 657101 517000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("test.h" include nil nil [1 18])
+            ("test" function
+               (:constructor-flag t
+                :parent "test"
+                :type ("test" type (:type "class") nil nil))
+                nil [20 36])
+            ("test" function
+               (:constructor-flag t
+                :parent "test"
+                :arguments 
+                  ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [49 55])
+                    ("d" variable (:type "int") (reparse-symbol arg-sub-list) [56 62]))                  
+                :type ("test" type (:type "class") nil nil))
+                nil [38 83])
+            ("print" function
+               (:parent "test"
+                :type "void")
+                nil [85 188])
+            ("another" function
+               (:parent "test"
+                :type "void")
+                nil [190 250])
+            ("bbc" function
+               (:parent "test"
+                :type "void")
+                nil [252 296]))          
+      :file "test.cpp"
+      :pointmax 296
+      :fsize 295
+      :lastmodtime '(23032 30249 927318 919000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("g++")) nil [1 10])
+            ("INCLUDE" variable nil nil [11 22])
+            ("LIBS" variable (:default-value ("-lm")) nil [23 34])
+            ("FILENAME" variable (:default-value ("*.cpp")) nil [67 84])
+            ("BIN" variable (:default-value ("test")) nil [84 95])
+            ("all" function (:arguments ("$(FILENAME)")) nil [96 169])
+            ("run" function nil nil [170 188])
+            ("clean" function nil nil [189 210]))          
+      :file "makefile"
+      :pointmax 210
+      :fsize 209
+      :lastmodtime '(23032 23638 109011 180000)
+      :unmatched-syntax '((shell-command 197 . 209) (bol 196 . 196))))
+  :file "!home!hrishi!work!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

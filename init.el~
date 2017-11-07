@@ -1,0 +1,201 @@
+(require 'package)
+(add-to-list 'package-archives
+         '("melpa" . "http://melpa.org/packages/") t)
+
+(package-initialize)
+
+(when (not package-archive-contents)
+    (package-refresh-contents))
+
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+(add-to-list 'load-path "~/.emacs.d/custom")
+
+(require 'setup-general)
+(if (version< emacs-version "24.4")
+    (require 'setup-ivy-counsel)
+  (require 'setup-helm)
+  (require 'setup-helm-gtags))
+  ;;(require 'setup-ggtags)
+(require 'setup-cedet)
+(require 'setup-editing)
+
+
+;enable line numbers:
+(global-linum-mode t)
+
+(defun fontify-frame (frame)
+  (set-frame-parameter frame 'font "Monospace-9.5"))
+
+;; Fontify current frame:
+(fontify-frame nil)
+;; Fontify any future frames:
+(push 'fontify-frame after-make-frame-functions) 
+
+;(setq default-directory "/home/hrishi/")
+;-----------------------------------------------------------------------------------;
+
+;set global undo key:
+(global-set-key [f4] 'undo)
+;enable clipboard support for emacs: 
+(global-set-key "\C-w" 'clipboard-kill-region)
+(global-set-key "\M-w" 'clipboard-kill-ring-save)
+(global-set-key "\C-y" 'clipboard-yank)
+
+;undo and redo global keys:
+(when (require 'redo nil 'noerror)
+    (global-set-key (kbd "C-s-z") 'redo))
+
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "<f9>") 'compile)
+(global-set-key "\C-xg" 'goto-line)
+(global-set-key "\C-x\C-t" 'shell);
+(global-set-key "\C-x\C-r" 'toggle-read-only);
+
+(setq yas-indent-line (quote none))
+(define-key prog-mode-map (kbd "C-m") nil)
+
+
+; (global-set-key (kbd "<f9>")
+;                 (lambda ()
+;                   (interactive)
+;                   (shell-command (concat "make run"))))
+;-----------------------------------------------------------------------------------;
+
+
+(load "/home/hrishi/.emacs.d/themes/ir-black-theme.el")
+(setq compile-command "make && make run")
+
+
+;paste to and from clipboard (while using emacs from terminal):
+(defun copy-to-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (message "Yanked region to x-clipboard!")
+        (call-interactively 'clipboard-kill-ring-save)
+        )
+    (if (region-active-p)
+        (progn
+          (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
+          (message "Yanked region to clipboard!")
+          (deactivate-mark))
+      (message "No region active; can't yank to clipboard!")))
+  )
+
+(defun paste-from-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (clipboard-yank)
+        (message "graphics active")
+        )
+    (insert (shell-command-to-string "xsel -o -b"))
+    )
+  )
+
+(global-set-key [f5] 'copy-to-clipboard)
+(global-set-key [f6] 'paste-from-clipboard)
+
+
+(global-set-key [f10]
+  '(lambda () (interactive) 
+      (condition-case nil (next-error) 
+         (error (next-error 1 t)))))
+;-----------------------------------------------------------------------------------;
+
+
+;; function-args
+;; (require 'function-args)
+;; (fa-config-default)
+;; (define-key c-mode-map  [(tab)] 'company-complete)
+;; (define-key c++-mode-map  [(tab)] 'company-complete)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (ggtags irony flycheck zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; on the fly syntax checking
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode t))
+
+
+;start google-c-style with emacs:
+(require 'google-c-style)
+
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+
+;-----------------------------------------------------------------------------------;
+;cedet mode for semantic evaluation : 
+(semantic-mode 1)
+(global-semantic-idle-scheduler-mode 1)
+
+(defun my:add-semantic-to-autocomplete()
+  (add-to-list 'ac-sources 'ac-source-semantic)
+)
+(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
+
+
+; ;; Auto completion
+; (use-package auto-complete
+;   :ensure t
+;   :init
+;   (progn
+;     (ac-config-default)
+;     (global-auto-complete-mode t)
+;     ))
+;-----------------------------------------------------------------------------------;
+; incase we are setting up huge projects with different folders and according to its own specific needs : 
+(global-ede-mode 1)
+;(ede-cpp-root-project "test" :file "~/work/test/main.cpp":include-path '(/../include_files))
+;-----------------------------------------------------------------------------------;
+
+;setting up YASnippet and start it with emacs:
+(require 'yasnippet)
+(yas-global-mode 1)
+;-----------------------------------------------------------------------------------;
+
+(require 'company-c-headers)
+(require 'company)
+(add-hook 'global-init-hook 'global-company-mode)
+(add-to-list 'company-backends 'company-c-headers)
+(add-to-list 'company-c-headers-path-system "/usr/include/c++/5/")
+(add-to-list 'company-c-headers-path-system "/usr/include/x86_64-linux-gnu/c++/5")
+(add-to-list 'company-c-headers-path-system "/usr/include/c++/5/backward")
+(add-to-list 'company-c-headers-path-system "/usr/lib/gcc/x86_64-linux-gnu/5/include")
+(add-to-list 'company-c-headers-path-system "/usr/local/include")
+(add-to-list 'company-c-headers-path-system "/usr/local/include")
+(add-to-list 'company-c-headers-path-system "/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed")
+(add-to-list 'company-c-headers-path-system "/usr/include")
+
+
+(defun my:ac-c-headers-init ()
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers))
+
+(add-hook 'c++-mode-hook 'my:ac-c-headers-init)
+(add-hook 'c-mode-hook 'my:ac-c-headers-init)
+
+;global shortcut for iedit mode: 
+(define-key global-map (kbd "C-c ;") 'iedit-mode)
+;-----------------------------------------------------------------------------------;
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
