@@ -10,15 +10,16 @@
             ("SDL2/SDL.h" include (:system-flag t) nil [19 40])
             ("string" include (:system-flag t) nil [41 58])
             ("math.h" include (:system-flag t) nil [59 76])
+            ("SDL2/SDL_blendmode.h" include (:system-flag t) nil [77 108])
             ("std" using (:type ("std" type
                  (:prototype t
                   :type "namespace")
-                  nil nil)) nil [78 98])
-            ("main" function (:type "int") nil [100 250]))          
+                  nil nil)) nil [110 130])
+            ("main" function (:type "int") nil [132 237]))          
       :file "main.cpp"
-      :pointmax 251
-      :fsize 250
-      :lastmodtime '(23041 3713 660216 472000)
+      :pointmax 238
+      :fsize 237
+      :lastmodtime '(23041 62923 532981 831000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :file "test.h"

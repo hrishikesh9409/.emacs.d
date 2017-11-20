@@ -1045,7 +1045,193 @@
           ("__GTHREAD_MUTEX_INIT" . ((symbol "PTHREAD_MUTEX_INITIALIZER" 2031 . 2056)))
           ("__GTHREADS_CXX0X" . ((number "1" 1270 . 1271)))
           )
-))
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("_GLIBCXX_ERROR_CONSTANTS" variable (:constant-flag t) nil [1317 1341])
+            ("bits/c++config.h" include (:system-flag t) nil [1345 1372])
+            ("cerrno" include (:system-flag t) nil [1373 1390])
+            ("std" type
+               (:members 
+                  ( ("errc" type (:type "class") (reparse-symbol namespacesubparts) [1478 5122]))                  
+                :type "namespace")
+                nil [1392 5156]))          
+      :file "error_constants.h"
+      :pointmax 5178
+      :fsize 5177
+      :lastmodtime '(22969 61736 0 0)
+      :unmatched-syntax '((symbol 5146 . 5154) (symbol 5105 . 5115) (punctuation 5100 . 5101) (symbol 5080 . 5099) (punctuation 5064 . 5065) (symbol 5055 . 5064) (punctuation 5050 . 5051) (symbol 5034 . 5049) (punctuation 4994 . 4995) (symbol 4989 . 4994) (punctuation 4985 . 4986) (symbol 4955 . 4984) (punctuation 4947 . 4948) (symbol 4941 . 4947) (punctuation 4935 . 4936) (symbol 4920 . 4934) (punctuation 4912 . 4913) (symbol 4906 . 4912) (punctuation 4901 . 4902) (symbol 4881 . 4900) (punctuation 4873 . 4874) (symbol 4867 . 4873) (punctuation 4863 . 4864) (symbol 4833 . 4862) (punctuation 4825 . 4826) (symbol 4816 . 4825) (punctuation 4810 . 4811) (symbol 4800 . 4809) (punctuation 4784 . 4785) (symbol 4777 . 4784) (punctuation 4771 . 4772) (symbol 4756 . 4770) (punctuation 4711 . 4712) (symbol 4706 . 4711) (punctuation 4700 . 4701) (symbol 4685 . 4699) (punctuation 4642 . 4643) (symbol 4627 . 4642) (punctuation 4622 . 4623) (symbol 4600 . 4621) (punctuation 4554 . 4555) (symbol 4548 . 4554) (punctuation 4543 . 4544) (symbol 4523 . 4542) (punctuation 4515 . 4516) (symbol 4509 . 4515) (punctuation 4505 . 4506) (symbol 4474 . 4504) (punctuation 4466 . 4467) (symbol 4459 . 4466) (punctuation 4455 . 4456) (symbol 4425 . 4454) (punctuation 4417 . 4418) (symbol 4412 . 4417) (punctuation 4407 . 4408) (symbol 4385 . 4406) (punctuation 4377 . 4378) (symbol 4362 . 4377) (punctuation 4357 . 4358) (symbol 4334 . 4356) (punctuation 4318 . 4319) (symbol 4312 . 4318) (punctuation 4306 . 4307) (symbol 4291 . 4305) (punctuation 4254 . 4255) (symbol 4248 . 4254) (punctuation 4243 . 4244) (symbol 4225 . 4242) (punctuation 4209 . 4210) (symbol 4199 . 4209) (punctuation 4193 . 4194) (symbol 4182 . 4192) (punctuation 4141 . 4142) (symbol 4130 . 4141) (punctuation 4125 . 4126) (symbol 4103 . 4124) (punctuation 4095 . 4096) (symbol 4085 . 4095) (punctuation 4081 . 4082) (symbol 4057 . 4080) (punctuation 4049 . 4050) (symbol 4044 . 4049) (punctuation 4040 . 4041) (symbol 4016 . 4039) (punctuation 4008 . 4009) (symbol 3997 . 4008) (punctuation 3992 . 3993) (symbol 3970 . 3991) (punctuation 3954 . 3955) (symbol 3945 . 3954) (punctuation 3940 . 3941) (symbol 3921 . 3939) (punctuation 3874 . 3875) (symbol 3867 . 3874) (punctuation 3861 . 3862) (symbol 3847 . 3860) (punctuation 3809 . 3810) (symbol 3803 . 3809) (punctuation 3798 . 3799) (symbol 3780 . 3797) (punctuation 3772 . 3773) (symbol 3764 . 3772) (punctuation 3758 . 3759) (symbol 3744 . 3757) (punctuation 3728 . 3729) (symbol 3722 . 3728) (punctuation 3716 . 3717) (symbol 3703 . 3715) (punctuation 3666 . 3667) (symbol 3658 . 3666) (punctuation 3652 . 3653) (symbol 3639 . 3651) (punctuation 3631 . 3632) (symbol 3624 . 3631) (punctuation 3619 . 3620) (symbol 3603 . 3618) (punctuation 3595 . 3596) (symbol 3590 . 3595) (punctuation 3585 . 3586) (symbol 3569 . 3584) (punctuation 3561 . 3562) (symbol 3555 . 3561) (punctuation 3551 . 3552) (symbol 3525 . 3550) (punctuation 3517 . 3518) (symbol 3511 . 3517) (punctuation 3505 . 3506) (symbol 3490 . 3504) (punctuation 3482 . 3483) (symbol 3477 . 3482) (punctuation 3473 . 3474) (symbol 3447 . 3472) (punctuation 3431 . 3432) (symbol 3426 . 3431) (punctuation 3421 . 3422) (symbol 3401 . 3420) (punctuation 3365 . 3366) (symbol 3359 . 3365) (punctuation 3354 . 3355) (symbol 3335 . 3353) (punctuation 3327 . 3328) (symbol 3316 . 3327) (punctuation 3311 . 3312) (symbol 3292 . 3310) (punctuation 3283 . 3284) (symbol 3277 . 3283) (punctuation 3271 . 3272) (symbol 3260 . 3270) (punctuation 3243 . 3244) (symbol 3236 . 3243) (punctuation 3231 . 3232) (symbol 3210 . 3230) (punctuation 3172 . 3173) (symbol 3166 . 3172) (punctuation 3161 . 3162) (symbol 3143 . 3160) (punctuation 3127 . 3128) (symbol 3120 . 3127) (punctuation 3114 . 3115) (symbol 3106 . 3113) (punctuation 3068 . 3069) (symbol 3062 . 3068) (punctuation 3057 . 3058) (symbol 3040 . 3056) (punctuation 3032 . 3033) (symbol 3025 . 3032) (punctuation 3020 . 3021) (symbol 3004 . 3019) (punctuation 2996 . 2997) (symbol 2985 . 2996) (punctuation 2980 . 2981) (symbol 2960 . 2979) (punctuation 2952 . 2953) (symbol 2943 . 2952) (punctuation 2937 . 2938) (symbol 2923 . 2936) (punctuation 2915 . 2916) (symbol 2907 . 2915) (punctuation 2901 . 2902) (symbol 2888 . 2900) (punctuation 2880 . 2881) (symbol 2872 . 2880) (punctuation 2866 . 2867) (symbol 2853 . 2865) (punctuation 2845 . 2846) (symbol 2839 . 2845) (punctuation 2833 . 2834) (symbol 2818 . 2832) (punctuation 2810 . 2811) (symbol 2807 . 2810) (punctuation 2801 . 2802) (symbol 2792 . 2800) (punctuation 2784 . 2785) (symbol 2778 . 2784) (punctuation 2772 . 2773) (symbol 2759 . 2771) (punctuation 2751 . 2752) (symbol 2745 . 2751) (punctuation 2740 . 2741) (symbol 2723 . 2739) (punctuation 2715 . 2716) (symbol 2710 . 2715) (punctuation 2704 . 2705) (symbol 2692 . 2703) (punctuation 2684 . 2685) (symbol 2678 . 2684) (punctuation 2675 . 2676) (symbol 2640 . 2674) (punctuation 2632 . 2633) (symbol 2626 . 2632) (punctuation 2621 . 2622) (symbol 2599 . 2620) (punctuation 2583 . 2584) (symbol 2578 . 2583) (punctuation 2573 . 2574) (symbol 2554 . 2572) (punctuation 2518 . 2519) (symbol 2506 . 2518) (punctuation 2501 . 2502) (symbol 2484 . 2500) (punctuation 2476 . 2477) (symbol 2470 . 2476) (punctuation 2465 . 2466) (symbol 2442 . 2464) (punctuation 2434 . 2435) (symbol 2422 . 2434) (punctuation 2417 . 2418) (symbol 2399 . 2416) (punctuation 2391 . 2392) (symbol 2386 . 2391) (punctuation 2380 . 2381) (symbol 2365 . 2379) (punctuation 2357 . 2358) (symbol 2351 . 2357) (punctuation 2338 . 2339) (symbol 2326 . 2337) (punctuation 2318 . 2319) (symbol 2311 . 2318) (punctuation 2307 . 2308) (symbol 2283 . 2306) (punctuation 2275 . 2276) (symbol 2266 . 2275) (punctuation 2261 . 2262) (symbol 2241 . 2260) (punctuation 2233 . 2234) (symbol 2228 . 2233) (punctuation 2224 . 2225) (symbol 2200 . 2223) (punctuation 2192 . 2193) (symbol 2180 . 2192) (punctuation 2176 . 2177) (symbol 2147 . 2175) (punctuation 2139 . 2140) (symbol 2134 . 2139) (punctuation 2129 . 2130) (symbol 2111 . 2128) (punctuation 2103 . 2104) (symbol 2093 . 2103) (punctuation 2088 . 2089) (symbol 2071 . 2087) (punctuation 2063 . 2064) (symbol 2051 . 2063) (punctuation 2046 . 2047) (symbol 2027 . 2045) (punctuation 2019 . 2020) (symbol 2011 . 2019) (punctuation 2007 . 2008) (symbol 1976 . 2006) (punctuation 1968 . 1969) (symbol 1956 . 1968) (punctuation 1951 . 1952) (symbol 1932 . 1950) (punctuation 1924 . 1925) (symbol 1919 . 1924) (punctuation 1913 . 1914) (symbol 1901 . 1912) (punctuation 1885 . 1886) (symbol 1878 . 1885) (punctuation 1872 . 1873) (symbol 1860 . 1871) (punctuation 1822 . 1823) (symbol 1817 . 1822) (punctuation 1812 . 1813) (symbol 1792 . 1811) (punctuation 1784 . 1785) (symbol 1778 . 1784) (punctuation 1772 . 1773) (symbol 1760 . 1771) (punctuation 1752 . 1753) (symbol 1748 . 1752) (punctuation 1743 . 1744) (symbol 1720 . 1742) (punctuation 1712 . 1713) (symbol 1707 . 1712) (punctuation 1702 . 1703) (symbol 1679 . 1701) (punctuation 1671 . 1672) (symbol 1664 . 1671) (punctuation 1659 . 1660) (symbol 1641 . 1658) (punctuation 1633 . 1634) (symbol 1620 . 1633) (punctuation 1615 . 1616) (symbol 1593 . 1614) (punctuation 1585 . 1586) (symbol 1575 . 1585) (punctuation 1569 . 1570) (symbol 1554 . 1568) (punctuation 1546 . 1547) (symbol 1534 . 1546) (punctuation 1530 . 1531) (symbol 1501 . 1529) (ENUM 1473 . 1477))
+      :lexical-table 
+        '(("_GLIBCXX_ERROR_CONSTANTS" . ((number "1" 1342 . 1343)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("std" type
+               (:members 
+                  ( ("ctype_base" type
+                       (:members 
+                          ( ("__to_type" type
+                               (:typedef ("int")
+                                :pointer 1
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1501 1532])
+                            ("mask" type
+                               (:typedef ("unsigned short")
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1672 1701])
+                            ("upper" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISupper"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1706 1745])
+                            ("lower" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISlower"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1750 1786])
+                            ("alpha" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISalpha"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1791 1827])
+                            ("digit" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISdigit"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1832 1868])
+                            ("xdigit" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISxdigit"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1873 1911])
+                            ("space" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISspace"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1916 1952])
+                            ("print" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISprint"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1957 1993])
+                            ("_ISpunct" variable (:type "int") (reparse-symbol classsubparts) [2047 2056])
+                            ("cntrl" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_IScntrl"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2061 2097])
+                            ("punct" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISpunct"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2102 2138])
+                            ("alnum" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "_ISalpha | _ISdigit"
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2143 2190]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1445 2269]))                  
+                :type "namespace")
+                nil [1328 2303]))          
+      :file "ctype_base.h"
+      :pointmax 2317
+      :fsize 2316
+      :lastmodtime '(22969 61736 0 0)
+      :unmatched-syntax '((symbol 2293 . 2301) (punctuation 2045 . 2046) (symbol 2036 . 2044) (punctuation 2034 . 2035) (symbol 2025 . 2033) (punctuation 2023 . 2024) (symbol 2016 . 2021) (symbol 2011 . 2015) (CONST 2005 . 2010) (STATIC 1998 . 2004)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("std" type
+               (:members 
+                  ( ("is" function
+                       (:methodconst-flag t
+                        :parent "ctype"
+                        :arguments 
+                          ( ("__m" variable (:type ("mask" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1482 1491])
+                            ("__c" variable (:type "char") (reparse-symbol arg-sub-list) [1492 1501]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1456 1569])
+                    ("is" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :parent "ctype"
+                        :constant-flag t
+                        :arguments 
+                          ( ("__low" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1606 1624])
+                            ("__high" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1625 1644])
+                            ("__vec" variable
+                               (:pointer 1
+                                :type ("mask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1645 1657]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1573 1782])
+                    ("scan_is" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :parent "ctype"
+                        :constant-flag t
+                        :arguments 
+                          ( ("__m" variable (:type ("mask" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1824 1833])
+                            ("__low" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1834 1852])
+                            ("__high" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1853 1872]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [1786 2007])
+                    ("scan_not" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :parent "ctype"
+                        :constant-flag t
+                        :arguments 
+                          ( ("__m" variable (:type ("mask" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2050 2059])
+                            ("__low" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2060 2078])
+                            ("__high" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2079 2098]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [2011 2237]))                  
+                :type "namespace")
+                nil [1375 2271]))          
+      :file "ctype_inline.h"
+      :pointmax 2285
+      :fsize 2284
+      :lastmodtime '(22969 61736 0 0)
+      :unmatched-syntax '((symbol 2261 . 2269))))
   :file "!usr!include!x86_64-linux-gnu!c++!5!bits!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

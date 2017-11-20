@@ -9260,6 +9260,497 @@
           ("__need_NULL")
           ("__clock_t_defined" . ((number "1" 1603 . 1604)))
           )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("features.h" include (:system-flag t) nil [910 931])
+            ("bits/types.h" include (:system-flag t) nil [932 955])
+            ("_WCTYPE_H" variable (:constant-flag t) nil [988 997])
+            ("__need_wint_t" variable (:constant-flag t) nil [1044 1057])
+            ("wchar.h" include (:system-flag t) nil [1058 1077])
+            ("WEOF" variable (:constant-flag t) nil [1227 1231])
+            ("__iswxxx_defined" variable (:constant-flag t) nil [1433 1449])
+            ("wctype_t" type
+               (:typedef ("unsigned long int")
+                :type "typedef")
+                nil [1577 1612])
+            ("endian.h" include (:system-flag t) nil [1824 1845])
+            ("_ISwbit" variable (:constant-flag t) nil [1892 1899])
+            ("" type
+               (:members 
+                  ( ("__ISwupper" variable
+                       (:constant-flag t
+                        :default-value (2232 2233)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2219 2233])
+                    ("__ISwlower" variable
+                       (:constant-flag t
+                        :default-value (2270 2271)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2257 2271])
+                    ("__ISwalpha" variable
+                       (:constant-flag t
+                        :default-value (2308 2309)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2295 2309])
+                    ("__ISwdigit" variable
+                       (:constant-flag t
+                        :default-value (2347 2348)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2334 2348])
+                    ("__ISwxdigit" variable
+                       (:constant-flag t
+                        :default-value (2384 2385)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2370 2385])
+                    ("__ISwspace" variable
+                       (:constant-flag t
+                        :default-value (2432 2433)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2419 2433])
+                    ("__ISwprint" variable
+                       (:constant-flag t
+                        :default-value (2471 2472)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2458 2472])
+                    ("__ISwgraph" variable
+                       (:constant-flag t
+                        :default-value (2508 2509)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2495 2509])
+                    ("__ISwblank" variable
+                       (:constant-flag t
+                        :default-value (2546 2547)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2533 2547])
+                    ("__ISwcntrl" variable
+                       (:constant-flag t
+                        :default-value (2602 2603)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2589 2603])
+                    ("__ISwpunct" variable
+                       (:constant-flag t
+                        :default-value (2648 2650)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2635 2650])
+                    ("__ISwalnum" variable
+                       (:constant-flag t
+                        :default-value (2689 2691)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2676 2691])
+                    ("_ISwupper" variable
+                       (:constant-flag t
+                        :default-value (2731 2751)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2719 2751])
+                    ("_ISwlower" variable
+                       (:constant-flag t
+                        :default-value (2785 2805)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2773 2805])
+                    ("_ISwalpha" variable
+                       (:constant-flag t
+                        :default-value (2839 2859)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2827 2859])
+                    ("_ISwdigit" variable
+                       (:constant-flag t
+                        :default-value (2894 2914)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2882 2914])
+                    ("_ISwxdigit" variable
+                       (:constant-flag t
+                        :default-value (2947 2968)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2934 2968])
+                    ("_ISwspace" variable
+                       (:constant-flag t
+                        :default-value (3012 3032)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3000 3032])
+                    ("_ISwprint" variable
+                       (:constant-flag t
+                        :default-value (3067 3087)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3055 3087])
+                    ("_ISwgraph" variable
+                       (:constant-flag t
+                        :default-value (3120 3140)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3108 3140])
+                    ("_ISwblank" variable
+                       (:constant-flag t
+                        :default-value (3174 3194)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3162 3194])
+                    ("_ISwcntrl" variable
+                       (:constant-flag t
+                        :default-value (3246 3266)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3234 3266])
+                    ("_ISwpunct" variable
+                       (:constant-flag t
+                        :default-value (3308 3328)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3296 3328])
+                    ("_ISwalnum" variable
+                       (:constant-flag t
+                        :default-value (3364 3384)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3352 3384]))                  
+                :type "enum")
+                nil [2210 3408])
+            ("towupper" function
+               (:type ("wint_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6720 6732]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6696 6741])
+            ("towlower" function
+               (:type ("wint_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6598 6610]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6574 6619])
+            ("wctrans_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :pointer 1
+                :typedef ("__int32_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [6363 6398])
+            ("iswctype" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6125 6137])
+                    ("__desc" variable (:type ("wctype_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6138 6154]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6104 6163])
+            ("wctype" function
+               (:type ("wctype_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__property" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5984 6007]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5960 6016])
+            ("iswblank" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5744 5756]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5723 5765])
+            ("iswxdigit" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5511 5523]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5489 5532])
+            ("iswupper" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5292 5304]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5271 5313])
+            ("iswspace" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5037 5049]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5016 5058])
+            ("iswpunct" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4826 4838]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4805 4847])
+            ("iswprint" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4624 4636]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4603 4645])
+            ("iswlower" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4535 4547]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4514 4556])
+            ("iswgraph" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4280 4292]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4259 4301])
+            ("iswdigit" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4144 4156]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4123 4165])
+            ("iswcntrl" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4015 4027]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3994 4036])
+            ("iswalpha" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3927 3939]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3906 3948])
+            ("iswalnum" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3640 3652]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3619 3661])
+            ("towctrans_l" function
+               (:type ("wint_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10960 10972])
+                    ("__desc" variable (:type ("wctrans_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10973 10990])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10997 11017]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10933 11026])
+            ("wctrans_l" function
+               (:type ("wctrans_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__property" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10803 10826])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10827 10847]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10775 10861])
+            ("towupper_l" function
+               (:type ("wint_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10612 10624])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10625 10645]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10586 10654])
+            ("towlower_l" function
+               (:type ("wint_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10467 10479])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10480 10500]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10441 10509])
+            ("iswctype_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10249 10261])
+                    ("__desc" variable (:type ("wctype_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10262 10278])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10279 10299]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10226 10313])
+            ("wctype_l" function
+               (:type ("wctype_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__property" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10080 10103])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10104 10124]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10054 10138])
+            ("iswblank_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9898 9910])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9911 9931]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9875 9940])
+            ("iswxdigit_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9663 9675])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9676 9696]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9639 9705])
+            ("iswupper_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9421 9433])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9434 9454]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9398 9463])
+            ("iswspace_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9143 9155])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9156 9176]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9120 9185])
+            ("iswpunct_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8909 8921])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8922 8942]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8886 8951])
+            ("iswprint_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8684 8696])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8697 8717]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8661 8726])
+            ("iswlower_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8572 8584])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8585 8605]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8549 8614])
+            ("iswgraph_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8294 8306])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8307 8327]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8271 8336])
+            ("iswdigit_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8135 8147])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8148 8168]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8112 8177])
+            ("iswcntrl_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7983 7995])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7996 8016]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7960 8025])
+            ("iswalpha_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7872 7884])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7885 7905]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7849 7914])
+            ("iswalnum_l" function
+               (:type "int"
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7562 7574])
+                    ("__locale" variable (:type ("__locale_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7575 7595]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7539 7604])
+            ("xlocale.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [7433 7455])
+            ("towctrans" function
+               (:type ("wint_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__wc" variable (:type ("wint_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7294 7306])
+                    ("__desc" variable (:type ("wctrans_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7307 7324]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7269 7333])
+            ("wctrans" function
+               (:type ("wctrans_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("__property" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7165 7188]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7139 7197]))          
+      :file "wctype.h"
+      :pointmax 11131
+      :fsize 11130
+      :lastmodtime '(22852 17649 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_WCTYPE_H" . ((number "1" 998 . 999)))
+          ("WEOF" . ((semantic-list "(0xffffffffu)" 1232 . 1245)))
+          ("_ISwbit" (spp-arg-list ("bit") 1899 . 1904) . ((semantic-list "(1 << (bit))" 1905 . 1917)))
+          ("__need_wint_t")
+          ("__iswxxx_defined" . ((number "1" 1450 . 1451)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_ERRNO_H" variable (:constant-flag t) nil [1010 1018])
+            ("features.h" include (:system-flag t) nil [1021 1043])
+            ("program_invocation_short_name" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [1825 1894])
+            ("program_invocation_name" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [1825 1894])
+            ("errno" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [1574 1591])
+            ("bits/errno.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1186 1209])
+            ("error_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [2279 2299])
+            ("__error_t_defined" variable (:constant-flag t) nil [2310 2327]))          
+      :file "errno.h"
+      :pointmax 2368
+      :fsize 2367
+      :lastmodtime '(22852 17633 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_ERRNO_H" . ((number "1" 1019 . 1020)))
+          ("__error_t_defined" . ((number "1" 2328 . 2329)))
+          )
 ))
   :file "!usr!include!semantic.cache"
   :semantic-tag-version "2.0"

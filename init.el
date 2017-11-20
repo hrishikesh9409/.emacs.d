@@ -177,7 +177,6 @@
 (load "/home/hrishi/.emacs.d/themes/ir-black-theme.el")
 (setq compile-command "make && make run")
 
-
 ;paste to and from clipboard (while using emacs from terminal):
 (defun copy-to-clipboard ()
   (interactive)
@@ -215,6 +214,11 @@
          (error (next-error 1 t)))))
 ;-----------------------------------------------------------------------------------;
 
+(global-visual-line-mode t)
+(set-display-table-slot standard-display-table 'wrap ?\n )
+(auto-fill-mode 1)
+(setq-default auto-fill-function 'do-auto-fill)
+(global-set-key (kbd "C-x C-d") 'auto-fill-mode)
 
 ;; function-args
 ;; (require 'function-args)
@@ -338,4 +342,5 @@
 ;     (global-auto-complete-mode t)
 ;     ))
 
-
+(remove-hook 'comint-output-filter-functions
+             'comint-postoutput-scroll-to-bottom)

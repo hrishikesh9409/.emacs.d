@@ -6,49 +6,48 @@
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode
       :tags 
-        '( ("string" include (:system-flag t) nil [1 18])
-            ("SDL2/SDL.h" include (:system-flag t) nil [19 40])
-            ("SDL2/SDL.h" include (:system-flag t) nil [41 62])
-            ("std" using (:type ("std" type
-                 (:prototype t
-                  :type "namespace")
-                  nil nil)) nil [64 84])
-            ("main" function (:type "int") nil [86 317]))          
-      :file "main.cpp"
-      :pointmax 318
-      :fsize 317
-      :lastmodtime '(23041 36042 123834 184000)
-      :unmatched-syntax nil)
-    (semanticdb-table "semanticdb-table"
-      :major-mode c++-mode
-      :tags 
         '( ("iostream" include (:system-flag t) nil [1 20])
             ("std" using (:type ("std" type
                  (:prototype t
                   :type "namespace")
-                  nil nil)) nil [22 42])
-            ("main" function (:type "int") nil [44 108]))          
-      :file "test.cpp"
-      :pointmax 994
-      :fsize 993
-      :lastmodtime '(23032 22102 242781 106000)
-      :unmatched-syntax '((semantic-list 576 . 993) (punctuation 575 . 576) (semantic-list 555 . 574) (punctuation 552 . 553) (symbol 546 . 551) (symbol 537 . 545) (symbol 533 . 536) (symbol 529 . 532) (symbol 526 . 528) (symbol 516 . 525) (symbol 512 . 515) (symbol 504 . 511) (symbol 494 . 503) (symbol 489 . 493) (symbol 480 . 488) (symbol 475 . 479) (symbol 472 . 474) (symbol 464 . 471) (symbol 460 . 463) (symbol 457 . 459) (symbol 450 . 456) (punctuation 448 . 449) (punctuation 446 . 447) (punctuation 445 . 446) (punctuation 444 . 445) (punctuation 443 . 444) (punctuation 442 . 443) (punctuation 441 . 442) (punctuation 440 . 441) (punctuation 439 . 440) (punctuation 438 . 439) (punctuation 437 . 438) (punctuation 436 . 437) (punctuation 435 . 436) (punctuation 434 . 435) (punctuation 433 . 434) (punctuation 432 . 433) (punctuation 431 . 432) (punctuation 430 . 431) (punctuation 429 . 430) (punctuation 428 . 429) (punctuation 427 . 428) (punctuation 426 . 427) (punctuation 425 . 426) (punctuation 424 . 425) (punctuation 423 . 424) (punctuation 422 . 423) (punctuation 421 . 422) (punctuation 420 . 421) (punctuation 419 . 420) (punctuation 418 . 419) (punctuation 417 . 418) (punctuation 416 . 417) (punctuation 415 . 416) (punctuation 414 . 415) (punctuation 413 . 414) (punctuation 412 . 413) (punctuation 411 . 412) (punctuation 410 . 411) (punctuation 409 . 410) (punctuation 408 . 409) (punctuation 407 . 408) (punctuation 406 . 407) (punctuation 405 . 406) (punctuation 404 . 405) (punctuation 403 . 404) (punctuation 402 . 403) (punctuation 401 . 402) (punctuation 400 . 401) (punctuation 399 . 400) (punctuation 398 . 399) (punctuation 397 . 398) (punctuation 396 . 397) (punctuation 395 . 396) (punctuation 394 . 395) (punctuation 393 . 394) (punctuation 392 . 393) (punctuation 391 . 392) (punctuation 390 . 391) (punctuation 389 . 390) (punctuation 388 . 389) (punctuation 387 . 388) (punctuation 386 . 387) (punctuation 385 . 386) (punctuation 384 . 385) (punctuation 383 . 384) (punctuation 382 . 383) (punctuation 381 . 382) (punctuation 380 . 381) (punctuation 379 . 380) (punctuation 378 . 379) (punctuation 377 . 378) (punctuation 376 . 377) (punctuation 375 . 376) (punctuation 374 . 375) (punctuation 373 . 374) (punctuation 372 . 373) (punctuation 371 . 372) (punctuation 370 . 371) (punctuation 369 . 370) (punctuation 368 . 369) (punctuation 367 . 368) (punctuation 366 . 367) (punctuation 365 . 366) (punctuation 364 . 365) (punctuation 363 . 364) (punctuation 362 . 363) (semantic-list 298 . 361) (semantic-list 208 . 297) (semantic-list 167 . 206) (semantic-list 149 . 166) (punctuation 146 . 147) (symbol 135 . 145) (symbol 126 . 134) (FOR 122 . 125) (symbol 117 . 121) (symbol 111 . 116) (punctuation 110 . 111)))
+                  nil nil)) nil [22 42]))          
+      :file "main.cpp"
+      :pointmax 131
+      :fsize 136
+      :lastmodtime '(23057 50127 940791 932000)
+      :unmatched-syntax '((semantic-list 52 . 130) (symbol 48 . 52) (close-paren 129 . 130) (punctuation 127 . 128) (number 126 . 127) (RETURN 119 . 125) (punctuation 113 . 114) (string 109 . 113) (punctuation 107 . 108) (punctuation 106 . 107) (string 84 . 105) (punctuation 82 . 83) (punctuation 81 . 82) (INT 44 . 47) (close-paren 129 . 130) (punctuation 127 . 128) (number 126 . 127) (RETURN 119 . 125) (punctuation 113 . 114) (string 109 . 113) (punctuation 107 . 108) (punctuation 106 . 107) (string 84 . 105) (punctuation 82 . 83) (punctuation 81 . 82)))
     (semanticdb-table "semanticdb-table"
       :major-mode makefile-gmake-mode
       :tags 
         '( ("CC" variable (:default-value ("g++")) nil [1 10])
-            ("INCLUDE" variable nil nil [11 22])
-            ("LIBS" variable nil nil [23 31])
-            ("FILENAME" variable (:default-value ("test.cpp")) nil [64 84])
-            ("BIN" variable (:default-value ("test")) nil [84 95])
-            ("all" function (:arguments ("$(FILENAME)")) nil [96 169])
-            ("run" function nil nil [170 188])
-            ("clean" function nil nil [189 210]))          
+            ("INCLUDE" variable nil nil [11 21])
+            ("LIBS" variable nil nil [22 29])
+            ("FILENAME" variable (:default-value ("main.cpp")) nil [62 82])
+            ("BIN" variable (:default-value ("main")) nil [82 93])
+            ("all" function (:arguments ("$(FILENAME)")) nil [94 167])
+            ("run" function nil nil [168 185])
+            ("clean" function nil nil [186 207]))          
+      :file "makefile~"
+      :pointmax 207
+      :fsize 206
+      :lastmodtime '(23057 50058 661636 570000)
+      :unmatched-syntax '((shell-command 194 . 206) (bol 193 . 193)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("CC" variable (:default-value ("g++")) nil [1 10])
+            ("INCLUDE" variable nil nil [11 21])
+            ("LIBS" variable nil nil [22 29])
+            ("FILENAME" variable (:default-value ("main.cpp")) nil [62 82])
+            ("BIN" variable (:default-value ("main")) nil [82 93])
+            ("all" function (:arguments ("$(FILENAME)")) nil [94 167])
+            ("run" function nil nil [168 185])
+            ("clean" function nil nil [186 207]))          
       :file "makefile"
-      :pointmax 210
-      :fsize 209
-      :lastmodtime '(23029 56524 458309 876000)
-      :unmatched-syntax '((shell-command 197 . 209) (bol 196 . 196))))
+      :pointmax 207
+      :fsize 206
+      :lastmodtime '(23057 50091 729291 134000)
+      :unmatched-syntax nil))
   :file "!home!hrishi!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")
